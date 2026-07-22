@@ -151,7 +151,7 @@
     <!-- Results. -->
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">Further Analysis</h2>
+        <h2 class="title is-3">Model Variant Analysis</h2>
       
         <div class="columns is-centered">
       <!-- Llama-3.1-8B. -->
@@ -184,12 +184,25 @@
       </div>
     </div>
     <!--/ Llama-3.1-8B-Instruct. -->
+    
+  </div>
+</section>
 
-    <!-- Per-Layer. -->
-        <h3 class="title is-4">Per-Layer Correlation</h3>
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Results. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Layer-Level Analysis</h2>
+  
+      <!-- Per-Layer. -->
+        <h3 class="title is-4">What if we exclude the embedding layer?</h3>
         <div class="content has-text-justified">
           <p>
-            Pending...
+            The lack of correlation persists and the changes in values is unoticeable.
+          </p>
+          <p>
+            Pending graph...
           </p>
         </div>
         <div class="content has-text-centered">
@@ -198,9 +211,31 @@
                   class="classification_tasks" -->
 
         </div>
-        <!--/ Generative. -->
+        <!--/ Per-Layer. -->
+
+        <!-- Per-Layer. -->
+        <h3 class="title is-4">Then, what about looking at each layer independently? Maybe one is noisy?</h3>
+        <div class="content has-text-justified">
+          <p>
+            Here we look at ARC-C due to the high numbers of coefficient to process. Depsite some layers having higher 
+            correlations than others, the correlation does not exceed the current highscore of 0.33.
+          </p>
+          <p>
+            Pending graph...
+          </p>
+        </div>
+        <div class="content has-text-centered">
+          <!-- <img src="./static/imgs/gsm8k.png"
+                 alt="Lack of correlation on a generative task."/>
+                  class="classification_tasks" -->
+
+        </div>
+        <!--/ Per-Layer. -->
+    
   </div>
 </section>
+
+
 
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
